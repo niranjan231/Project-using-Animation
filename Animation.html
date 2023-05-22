@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project using animations</title>
+    <style>
+      *{
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .sky{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://raw.githubusercontent.com/riya-singhal31/css/08a6ba24a0c10c549eae012dcd78aa04b57f8dad/animations/images/sky.jpeg");
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  .road{
+    height: 300px;
+    width: 500%;
+    background-image: url("https://raw.githubusercontent.com/riya-singhal31/css/08a6ba24a0c10c549eae012dcd78aa04b57f8dad/animations/images/road.jpg");
+    position: absolute;
+    bottom:0px;
+    animation: roadMove 5s linear infinite;
+  }
+  
+  @keyframes roadMove {
+    100%{
+      transform: translateX(-3000px);
+    }
+  }
+  
+  
+  .streets{
+    height: 220px;
+    width:500%;
+    background-image: url("https://raw.githubusercontent.com/riya-singhal31/css/08a6ba24a0c10c549eae012dcd78aa04b57f8dad/animations/images/city.png");
+    position: absolute;
+    bottom:300px;
+    animation: streetMove 15s linear infinite;
+  }
+  
+  @keyframes streetMove {
+    100%{
+      transform: translateX(-1000px);
+    }
+  }
+  
+  .car{
+    width: 300px;
+    left:50%;
+    bottom: 150px;
+    position:absolute;
+    transform: translateX(-50%);
+  }
+  
+  .car img{
+    width: 200%;
+    animation: carMove 1s linear infinite;
+  }
+  
+  @keyframes carMove {
+    0%{
+      transform: translateY(-1px);
+    }
+  
+    50%{
+      transform: translateY(1px);
+    }
+  
+    100%{
+      transform: translateY(-1px);
+    }
+  }
+  
+  .wheels img{
+    height: 100px;
+    width: 100px;
+    animation: wheelMove 1s linear infinite;
+  }
+  
+  #front{
+    left: 72%;
+    top: 56%;
+    position: absolute;
+  }
+  
+  #back{
+    left: 42.5%;
+    top: 56%;
+    position: absolute;
+  }
+  
+  @keyframes wheelMove {
+    100%{  transform: rotate(360deg);}
+  }
+    </style>
+  </head>
+  <body>
+    <div class="sky">
+      
+      <div class="road">
+        <p><span>Niranjan</span></p>
+
+      </div>
+      <div class="streets">
+
+      </div>
+      <div class="car">
+       <img src="https://raw.githubusercontent.com/riya-singhal31/css/08a6ba24a0c10c549eae012dcd78aa04b57f8dad/animations/images/car.png" alt="my car">
+      </div>
+
+      <div class="wheels">
+        <img src="https://raw.githubusercontent.com/riya-singhal31/css/08a6ba24a0c10c549eae012dcd78aa04b57f8dad/animations/images/wheel.png" id="front"> 
+        <img src="https://raw.githubusercontent.com/riya-singhal31/css/08a6ba24a0c10c549eae012dcd78aa04b57f8dad/animations/images/wheel.png" id="back">
+      </div>
+    </div>
+
+  </body>
+</html>
